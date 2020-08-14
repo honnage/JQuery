@@ -7,24 +7,18 @@
     <script Type="text/javascript" src="jquery.js"></script>
     <script>
         $(function(){
-            //id
-            $("#p").click(function(){
-                alert('Hello world')
+            $("p").click(function(){
+                $("p")
+                .css("background","yellow")
+                .css("color","red")
+                .css("font-size","50px")
+                .css("border","1px solid black")
+                .css("padding","50px")
             });
-            $("#p1").click(function(){
-                alert('Programming');
-            })
-            //class
-            $(".class1").click(function(){
-                alert("Java");
-            })
         });
     </script>
 </head>
 <body>
-    <p id="p">Hello</p>
-    <p id="p1">Programming</p>
-    <p class="class1">java</p>
-
+   <p>Hello World</p>
 </body>
 </html>
