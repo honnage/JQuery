@@ -7,23 +7,32 @@
     <script Type="text/javascript" src="jquery.js"></script>
     <script>
         $(function(){
-            $("button").click(function(){
-                $("#p1").css("background","green").css("color","#ffffff")
-                $("#p2").css("background","red").css("color","#ffffff")
-                $("#p3").css("background","pink").css("color","#ffffff")
-                $("#p4").css("background","blue").css("color","#ffffff")
-                // $("button").css("font-size","20px") //แบบกำหนด
-                $(this).css("font-size","20px") //แบบที่การทำงานอยู่
-
+            //เปลี่ยน style โดยใช Class
+            $("#add").click(function(){
+                $("p").addClass("style1"); 
+            });
+            $("#del").click(function(){
+                $("p").removeClass("style1");
+            });
+            $("#toggle").click(function(){
+                $("p").toggleClass("style1","style1");
             });
         });
     </script>
+    <style>
+        .style1{
+            font-size: 20px;
+            color: red;
+            background-color: gold;
+            border: 2px dotted black;
+        };
+    </style>
 </head>
 <body>
-   <p id="p1">Hello World</p>
-   <p id="p2">PHP</p>
-   <p id="p3">Java</p>
-   <p id="p4">HTML</p>
-   <button>Click</button>
+    <p>Hello Wotld</p>
+    <br>
+    <button id="add">เพื่ม Style</button>
+    <button id="del">ลบ Style</button>
+    <button id="toggle">สลับ Style</button>
 </body>
 </html>
